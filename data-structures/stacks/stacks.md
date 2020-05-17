@@ -1,12 +1,15 @@
 # Stacks
 
-- Last In First Out (LIFO)
+- Last In First Out (LIFO).
+- Linear data structure / sequential collection.
 - Picture a stack of plates or books. The top one (last one in) must be taken from the top first before retrieving the next.
 - **Limited access data structure** - elements can be added and removed only from the top.
-- Supports 2 operations:
+- Supports 3 operations:
   1. **Push** - adds a new item to the top of the stack.
   1. **Pop** - removes the item from the top of the stack.
-- A Stack is a **recursive data structure** - when you call pop on a stack, the result is a smaller stack data structure.
+  1. **Peek** - returns the item at the top of the stack, but does not remove it.
+- A stack is a **recursive data structure** - when you call pop on a stack, the result is a smaller stack data structure.
+- A stack is needed for implementing depth-first search (DFS).
 
 #### + Benefits
 
