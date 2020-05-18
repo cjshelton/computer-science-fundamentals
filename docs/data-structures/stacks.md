@@ -24,3 +24,7 @@
 
 - Reversing a word - Push each letter onto the stack, and then pop them off. The result is the word backwards.
 - "Undo" mechanism - Each action performed by the user is added to a stack. To undo the last action, you can pop off the item from the top of the stack, which will be the last action performed.
+
+#### Implementations
+
+Stacks can be implemented as arrays or linked lists.
