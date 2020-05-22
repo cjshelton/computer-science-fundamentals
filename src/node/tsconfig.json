@@ -8,6 +8,6 @@
         "outDir": "dist",
         "target": "ES5"
     },
-    "include": ["src/**/*.ts"],
-    "exclude": ["node_modules", "**/*.spec.ts"]
+    "include": ["src/**/*.ts", "tests/**/*.ts"],
+    "exclude": ["node_modules"]
 }
