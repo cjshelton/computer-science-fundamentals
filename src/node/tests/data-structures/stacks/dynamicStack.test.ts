@@ -33,6 +33,27 @@ describe('DynamicStack', () => {
             const poppedItem = stack.pop();
 
             expect(poppedItem).toEqual(itemTwo);
+            expect(stack.length).toBe(1);
+        });
+
+        test('it removes items in the reverse order they were added to the stack', () => {
+            const stack = new DynamicStack<object>();
+            const itemOne = { foo: 'bar' };
+            const itemTwo = { bar: 'foo' };
+            const itemThree = { fooBar: 'fooBar' };
+
+            stack.push(itemOne);
+            stack.push(itemTwo);
+            stack.push(itemThree);
+
+            const firstPoppedItem = stack.pop();
+            const secondPoppedItem = stack.pop();
+            const thirdPoppedItem = stack.pop();
+
+            expect(firstPoppedItem).toEqual(itemThree);
+            expect(secondPoppedItem).toEqual(itemTwo);
+            expect(thirdPoppedItem).toEqual(itemOne);
+            expect(stack.isEmpty).toBeTruthy();
         });
 
         test('it fails to remove an item when the stack is empty', () => {
