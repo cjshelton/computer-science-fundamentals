@@ -97,9 +97,9 @@ describe('SinglyLinkedList', () => {
             const secondItem = linkedList.get(1);
             const thirdItem = linkedList.get(2);
 
-            expect(firstItem).toBe(1);
-            expect(secondItem).toBe(2);
-            expect(thirdItem).toBe(3);
+            expect(firstItem.value).toBe(1);
+            expect(secondItem.value).toBe(2);
+            expect(thirdItem.value).toBe(3);
         });
 
         test('it fails when the list is empty', () => {
@@ -182,7 +182,7 @@ describe('SinglyLinkedList', () => {
             linkedList.delete(1);
 
             expect(linkedList.length).toBe(2);
-            expect(linkedList.get(1)).toBe(3);
+            expect(linkedList.get(1).value).toBe(3);
         });
     });
 });
