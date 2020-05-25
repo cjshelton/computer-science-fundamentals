@@ -37,28 +37,25 @@ class SinglyLinkedList<T> {
             return item;
         } else {
             // Store a reference to the current tail so it can be returned.
-            const currentTailSinglyLinkedListNode = this.tail;
+            const currentTailNode = this.tail;
 
-            let currentSinglyLinkedListNode = this.head;
-            while (currentSinglyLinkedListNode) {
-                if (
-                    currentSinglyLinkedListNode.next ===
-                    currentTailSinglyLinkedListNode
-                ) {
+            let currentNode = this.head;
+            while (currentNode) {
+                if (currentNode.next === currentTailNode) {
                     break;
                 }
 
-                currentSinglyLinkedListNode = currentSinglyLinkedListNode.next;
+                currentNode = currentNode.next;
             }
 
             // Updated the penultimate to be the new tail node.
-            const penultimateSinglyLinkedListNode: SinglyLinkedListNode<T> = currentSinglyLinkedListNode;
-            penultimateSinglyLinkedListNode.next = null;
-            this.tail = penultimateSinglyLinkedListNode;
+            const penultimateNode: SinglyLinkedListNode<T> = currentNode;
+            penultimateNode.next = null;
+            this.tail = penultimateNode;
 
             this.length--;
 
-            return currentTailSinglyLinkedListNode.value;
+            return currentTailNode.value;
         }
     }
 
@@ -75,15 +72,15 @@ class SinglyLinkedList<T> {
             return this.tail.value;
         }
 
-        let currentSinglyLinkedListNode = this.head;
+        let currentNode = this.head;
         let currentIndex = 0;
 
         while (currentIndex < index) {
-            currentSinglyLinkedListNode = currentSinglyLinkedListNode.next;
+            currentNode = currentNode.next;
             currentIndex++;
         }
 
-        return currentSinglyLinkedListNode.value;
+        return currentNode.value;
     }
 
     isEmpty(): boolean {
