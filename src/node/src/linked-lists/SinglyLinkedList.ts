@@ -98,8 +98,9 @@ class SinglyLinkedList<T> {
                 this.tail = null;
             } else {
                 this.head = this.head.next;
-                this.length--;
             }
+
+            this.length--;
 
             return;
         }
