@@ -5,7 +5,7 @@ describe('DoublyLinkedList', () => {
         test('no items are in the list', () => {
             const linkedList = new DoublyLinkedList<number>();
 
-            expect(linkedList.isEmpty).toBeTruthy();
+            expect(linkedList.isEmpty()).toBeTruthy();
             expect(linkedList.head).toBeNull();
             expect(linkedList.tail).toBeNull();
         });
@@ -48,7 +48,7 @@ describe('DoublyLinkedList', () => {
             const poppedItem: string = linkedList.pop();
 
             expect(poppedItem).toBe('foo');
-            expect(linkedList.isEmpty).toBeTruthy();
+            expect(linkedList.isEmpty()).toBeTruthy();
         });
 
         test('it resets the head and tail when only one item exists in the list', () => {
@@ -57,7 +57,7 @@ describe('DoublyLinkedList', () => {
 
             linkedList.pop();
 
-            expect(linkedList.isEmpty).toBeTruthy();
+            expect(linkedList.isEmpty()).toBeTruthy();
             expect(linkedList.head).toBeNull();
             expect(linkedList.tail).toBeNull();
         });
@@ -126,7 +126,7 @@ describe('DoublyLinkedList', () => {
 
             linkedList.delete(0);
 
-            expect(linkedList.isEmpty).toBeTruthy();
+            expect(linkedList.isEmpty()).toBeTruthy();
             expect(linkedList.head).toBeNull();
             expect(linkedList.tail).toBeNull();
         });
